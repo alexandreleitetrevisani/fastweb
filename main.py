@@ -40,11 +40,11 @@ async def cad_servicos(request: Request):
     form = await request.form()
 
     servico: str = form.get('servico')
-    # print(f"Serviço: {servico}")
+    print(f"Serviço: {servico}")
 
     arquivo: UploadFile = form.get('arquivo')
-    # print(f"Nome do arquivo: {arquivo.filename}")
-    # print(f"Tipo do arquivo: {arquivo.content_type}")
+    print(f"Nome do arquivo: {arquivo.filename}")
+    print(f"Tipo do arquivo: {arquivo.content_type}")
 
     # Nome aleatório para arquivo
     arquivo_ext: str = arquivo.filename.split('.')[1]
