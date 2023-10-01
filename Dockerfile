@@ -10,8 +10,8 @@
 
 # EXPOSE 8000
 
-FROM python3.8-alpine
-RUN pip install fastapi uvicorn
-COPY . /var/www
+FROM python:3.8-alpine
 WORKDIR /var/www
+COPY . /var/www
+RUN python3.8 -m venv venv &&  source venv/bin/activate && pip install -r requirements.txt
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "15400"]

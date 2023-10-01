@@ -6,7 +6,7 @@ from fastapi import UploadFile
 from pathlib import Path
 from aiofile import async_open
 from uuid import uuid4
-from mangum import Mangum
+
 
 app = FastAPI()
 templates = Jinja2Templates(directory='templates')
