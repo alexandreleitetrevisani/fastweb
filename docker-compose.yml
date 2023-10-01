@@ -1,0 +1,7 @@
+version: "3"
+services:
+  fastweb:
+    build: .
+    container_name: "fastweb_cont"
+    ports:
+      - "8000:15400"
